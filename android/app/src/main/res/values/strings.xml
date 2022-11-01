@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">طيران - المطاعم</string>
+    <string name="title_activity_main">طيران - المطاعم</string>
+    <string name="package_name">com.apps.dev.tyran.market</string>
+    <string name="custom_url_scheme">com.apps.dev.tyran.market</string>
+</resources>

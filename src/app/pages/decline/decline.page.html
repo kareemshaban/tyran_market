@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title" >سبب الرفض  </ion-title>
+    <ion-icon name="close-circle-outline" class="headericon" (click)="close()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-textarea placeholder="مثال  : الطلب بملح خفيف" [(ngModel)]="notes">
+
+  </ion-textarea>
+
+  <ion-button color="primary" (click)="decline()" style="display: block; margin: auto;">   رفض</ion-button>
+</ion-content>

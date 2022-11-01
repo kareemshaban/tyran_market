@@ -1,0 +1,13 @@
+{
+  "name": "Tyran Market",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "plugins": {
+    "SplashScreen": {
+      "androidSplashResourceName": "splash"
+    }
+  } ,
+  "type": "angular"
+}

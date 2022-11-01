@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">قائمة المنتجات</ion-title>
+    <ion-icon class="close" (click)="close()" name="close-circle"></ion-icon>
+  </ion-toolbar>
+  <ion-segment scrollable="true" dir="rtl" [(ngModel)]="catid" *ngIf="market" >
+    <ion-segment-button  *ngFor="let cat of market.departments; let i = index "  [value]="cat.id" (click)="changeCat(cat.id)">
+      {{cat.name}}
+    </ion-segment-button>
+  </ion-segment> 
+</ion-header>
+
+<ion-content>
+  <ion-spinner name="dots" class="spinner" [hidden] ="loaded"></ion-spinner>
+<div [hidden] ="!loaded">
+
+
+<ion-list *ngIf="market" >
+  <ion-item      *ngFor="let item of products" lines="none" style="direction: rtl;" (click)="selectAction(item.id , item.available)"> 
+    <img [src]="base_url +  item.img" class="img">
+    <ion-label class="name">{{item.name}} <br> 
+     <span style="color: #DB4524;"> {{item.available === 1 ? ' منتج متاح' : 
+      'غير متاح' }}  </span>
+    </ion-label> 
+  </ion-item>
+
+</ion-list>
+</div>
+
+</ion-content>
